@@ -1,12 +1,12 @@
 #
-# Cookbook:: nginx
+# Cookbook:: nginx_cookbook
 # Spec:: default
 #
 # Copyright:: 2018, The Authors, All Rights Reserved.
 
 require 'spec_helper'
 
-describe 'nginx::default' do
+describe 'nginx_cookbook::default' do
   context 'When all attributes are default, on Ubuntu 16.04' do
     let(:chef_run) do
       # for a complete list of available platforms and versions see:
