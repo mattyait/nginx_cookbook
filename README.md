@@ -4,6 +4,7 @@ This cookbook is use to compile and install the nginx from source.
 
 # Build Docker container
 	docker build -t chef_demo .
+	
 # Run the container
 	docker run -it -d -v /mnt/ngnix_cookbook:/var/chef/cookbooks/nginx_cookbook chef_demo
 # Run the recipe
