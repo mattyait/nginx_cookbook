@@ -1,6 +1,6 @@
 # nginx_cookbook
 
-TODO: Enter the cookbook description here.
+This cookbook is use to compile and install the nginx from source.
 
 # Build Docker container
 	docker build -t chef_demo .
@@ -9,3 +9,14 @@ TODO: Enter the cookbook description here.
 # Run the recipe
 	docker exec -it <container_id> bash
 	chef-solo -c solo_config/solo.rb -o "recipe[nginx_cookbook]"
+
+To Install all the dependent cookboook from supermarket
+
+	berks install
+	
+To use local mode, need to berks vendor and then point Chef Solo at that vendored directory. Chef does not know how to read from Berkshelf or the Berkshelf shelf.
+	
+	cookbook_path [
+               '/var/chef/cookbooks',
+               '/var/chef/cookbooks/nginx_cookbook/berks-cookbooks'
+              ]

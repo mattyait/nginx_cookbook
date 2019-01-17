@@ -1,0 +1,10 @@
+DEPENDENCIES
+  nginx_cookbook
+    path: .
+    metadata: true
+  tar (~> 2.2.0)
+
+GRAPH
+  nginx_cookbook (0.1.0)
+    tar (~> 2.2.0)
+  tar (2.2.0)
