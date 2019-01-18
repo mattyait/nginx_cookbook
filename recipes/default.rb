@@ -71,7 +71,7 @@ end
 bash 'Install OPENSSL' do
   code <<-EOH
     cd #{node['nginx']['openssl']['installation_path']}/openssl-1.0.2q
-    ./Configure
+    ./Configure linux-x86_64 --prefix=/usr
     make
     make install
     EOH
