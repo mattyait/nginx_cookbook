@@ -22,6 +22,14 @@ describe 'nginx_cookbook::default' do
     it 'Install PCRE module' do
       expect(chef_run).to run_bash('Install PCRE')
     end
+
+    it 'Zlib module download' do
+      expect(chef_run).to create_remote_file('/tmp/zlib-1.2.11.tar.gz')
+    end
+
+    it 'Install ZLIB module' do
+      expect(chef_run).to run_bash('Install ZLIB')
+    end
     
     it 'converges successfully' do
       expect { chef_run }.to_not raise_error
@@ -44,7 +52,15 @@ describe 'nginx_cookbook::default' do
     it 'Install PCRE module' do
       expect(chef_run).to run_bash('Install PCRE')
     end
-    
+
+    it 'Zlib module download' do
+      expect(chef_run).to create_remote_file('/tmp/zlib-1.2.11.tar.gz')
+    end
+
+    it 'Install ZLIB module' do
+      expect(chef_run).to run_bash('Install ZLIB')
+    end
+
     it 'converges successfully' do
       expect { chef_run }.to_not raise_error
     end
