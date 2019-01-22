@@ -24,3 +24,7 @@ To use local mode, need to berks vendor and then point Chef Solo at that vendore
                '/var/chef/cookbooks',
                '/var/chef/cookbooks/nginx_cookbook/berks-cookbooks'
               ]
+
+To run the chef spec, use below
+	
+	chef exec rspec
